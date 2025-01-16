@@ -37,13 +37,13 @@ export const columns = (): ColumnDef<InkModel>[] => [
   {
     accessorKey: "model",
     cell: ({ row }) => {
-      const Icon = row.original.icon; // Access the icon from the original data
+      // const Icon = row.original.icon; // Access the icon from the original data
       const model = row.original.model;
       return (
         <div className="flex items-center space-x-2">
-          <div className="p-2 rounded-sm bg-primary/10 text-primary">
+          {/* <div className="p-2 rounded-sm bg-primary/10 text-primary">
             {Icon}
-          </div>
+          </div> */}
           <span>{model}</span>
         </div>
       );

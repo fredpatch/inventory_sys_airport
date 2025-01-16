@@ -21,7 +21,7 @@ export type SimHolder = {
 
   issuedDate: Date;
   updatedAt: Date;
-  icon: ReactNode;
+  // icon: ReactNode;
 };
 
 export type InkModel = {
@@ -32,7 +32,7 @@ export type InkModel = {
 
   savedDate: Date;
   updatedAt: Date;
-  icon: ReactNode;
+  // icon: ReactNode;
 };
 
 export type SimFormDataToSend = {
@@ -42,7 +42,7 @@ export type SimFormDataToSend = {
   status: "Active" | "Inactive" | "Draft";
   subscriptions: string[];
   cost: number;
-  icon: ReactNode;
+  // icon: ReactNode;
 };
 
 export type SimFormDataToUpdate = {
@@ -53,7 +53,7 @@ export type SimFormDataToUpdate = {
   status: "Active" | "Inactive" | "Draft";
   subscriptions: string[];
   cost: number;
-  icon: ReactNode;
+  // icon: ReactNode;
 };
 
 type SortableHeaderProps = {

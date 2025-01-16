@@ -56,9 +56,9 @@ const multiSelectFilter: FilterFn<unknown> = (
 ) => {
   const value = row.getValue(columnId);
 
-  console.log("Filter Value:", filterValue);
-  console.log("Get Value:", row);
-  console.log("Row Value:", value); // Log the row value for debugging
+  // console.log("Filter Value:", filterValue);
+  // console.log("Get Value:", row);
+  // console.log("Row Value:", value); // Log the row value for debugging
 
   if (Array.isArray(value)) {
     return value.some((val) =>

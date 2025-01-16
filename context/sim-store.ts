@@ -142,10 +142,11 @@ export const useSimStore = create<ProductState>((set, get) => ({
       // console.log("RESPONSE ==>", response.data);
 
       if (response.data) {
-        const sims = response.data.map((sim: any) => ({
-          ...sim,
-          icon: convertStringToIcon(sim.icon, icons),
-        }));
+        const sims = response.data;
+        // response.data.map((sim: any) => ({
+        //   ...sim,
+        //   icon: convertStringToIcon(sim.icon, icons),
+        // }));
         set({ allSims: sims, isLoading: false });
         return sims;
       }
@@ -162,7 +163,7 @@ export const useSimStore = create<ProductState>((set, get) => ({
     try {
       const simToSave = {
         ...sim,
-        icon: convertIconToString(sim.icon),
+        // icon: convertIconToString(sim.icon),
         // quantityInStock: sim.quantityInStock - sim.quantitySold,
       };
       const response = await axios.post(
@@ -182,7 +183,7 @@ export const useSimStore = create<ProductState>((set, get) => ({
 
       const newSim = {
         ...response.data,
-        icon: convertStringToIcon(response.data.icon, icons),
+        // icon: convertStringToIcon(response.data.icon, icons),
       };
       set((state) => ({
         allSims: [...state.allSims, newSim],
@@ -202,7 +203,7 @@ export const useSimStore = create<ProductState>((set, get) => ({
     try {
       const updatedSimCard = {
         ...updatedSim,
-        icon: convertIconToString(updatedSim.icon),
+        // icon: convertIconToString(updatedSim.icon),
       };
 
       // api call
@@ -221,7 +222,7 @@ export const useSimStore = create<ProductState>((set, get) => ({
       if (response.data) {
         const updatedCardSim = {
           ...response.data,
-          icon: convertStringToIcon(response.data.icon, icons),
+          // icon: convertStringToIcon(response.data.icon, icons),
         };
         set((state) => ({
           allSims: state.allSims.map((sim) =>

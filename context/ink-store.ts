@@ -90,13 +90,13 @@ export const useInkStore = create<InkState>((set, get) => ({
         throw new Error("Failed to fetch inks");
       }
 
-      const inks = response.data.map((ink: any) => ({
-        ...ink,
-        icon: convertStringToIcon(ink.icon, icons),
-      }));
+      // const inks = response.data.map((ink: any) => ({
+      //   ...ink,
+      //   icon: convertStringToIcon(ink.icon, icons),
+      // }));
 
-      set({ allInks: inks, isLoading: false });
-      return inks;
+      set({ allInks: response.data, isLoading: false });
+      return response.data;
     } catch (error) {
       console.error("Error loading inks:", error);
       throw error;

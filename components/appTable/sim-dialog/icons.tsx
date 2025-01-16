@@ -1,12 +1,4 @@
 import {
-  IconBrandFacebook,
-  IconShoppingCart,
-  IconDeviceLaptop,
-  IconBrandInstagram,
-  IconBrandTwitter,
-  IconBrandLinkedin,
-} from "@tabler/icons-react";
-import {
   FaBookReader,
   FaShoppingCart,
   FaLaptop,
@@ -71,6 +63,19 @@ import {
 } from "react-icons/gi";
 import { BiSolidDroplet } from "react-icons/bi";
 import { GrMonitor } from "react-icons/gr";
+
+import * as FaIcon from "react-icons/fa";
+import React from "react";
+
+export const getIconByName = (name: string) => {
+  return (FaIcon as any)[name] || null;
+};
+
+export const allIconsArray = Object.keys(FaIcon).map((key, index) => ({
+  id: index,
+  icon: React.createElement((FaIcon as any)[key]),
+  isSelected: false,
+}));
 
 export const icons = [
   { id: 1, icon: <FaBookReader />, isSelected: true }, // Books

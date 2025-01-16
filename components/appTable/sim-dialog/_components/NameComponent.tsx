@@ -5,16 +5,12 @@ import { useFormContext } from "react-hook-form";
 import { MdError } from "react-icons/md";
 import { IconSelector } from "../icon-selector";
 
-export const NameComponent = ({
-  onSelectedIcon,
-}: {
-  onSelectedIcon: (selectedIcon: React.ReactNode) => void;
-}) => {
+export const NameComponent = () => {
   const { register } = useFormContext();
 
-  function getSelectedIcon(selectedIcon: React.ReactNode) {
-    onSelectedIcon(selectedIcon);
-  }
+  // function getSelectedIcon(selectedIcon: React.ReactNode) {
+  //   onSelectedIcon(selectedIcon);
+  // }
   return (
     <div className="mt-5 flex flex-col gap-2">
       <Label htmlFor="product-name" className="text-slate-700">
@@ -31,7 +27,7 @@ export const NameComponent = ({
           className="h-11 shadow-none"
           placeholder="John Doe"
         />
-        <IconSelector onUpdateIcon={getSelectedIcon} />
+        {/* <IconSelector onUpdateIcon={getSelectedIcon} /> */}
       </div>
 
       {/* Error message */}

@@ -218,7 +218,9 @@ const AddItemDialog = () => {
             <div className="flex flex-col gap-2 mt-1">
               {/* First Row */}
               <div className="grid grid-cols-2 gap-7">
-                <NameComponent onSelectedIcon={onSelectedIcon} />
+                <NameComponent
+                // onSelectedIcon={onSelectedIcon}
+                />
                 <DepartmentComponent />
               </div>
 
