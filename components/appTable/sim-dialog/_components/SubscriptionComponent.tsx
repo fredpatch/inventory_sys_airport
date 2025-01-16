@@ -116,11 +116,11 @@ export function SubscriptionComponent({
       </Popover>
 
       {/* error message */}
-      {errors.subscriptions && (
+      {/* {errors.subscriptions && (
         <p className="text-red-500 text-sm">
           <>{errors.subscriptions.message}</>
         </p>
-      )}
+      )} */}
     </div>
   );
 }
