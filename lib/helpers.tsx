@@ -57,7 +57,7 @@ export type SimFormDataToUpdate = {
 };
 
 type SortableHeaderProps = {
-  column: Column<SimHolder | InkModel, unknown>; // Specify the type of data
+  column: Column<SimHolder, unknown>; // Specify the type of data
   label: string;
 };
 
