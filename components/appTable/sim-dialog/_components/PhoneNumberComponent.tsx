@@ -39,14 +39,14 @@ export const PhoneNumberComponent = () => {
       />
 
       {/* error message */}
-      {errors.simNumber && (
+      {/* {errors.simNumber && (
         <div className="text-red-500 flex gap-1 items-center text-[13px]">
           <MdError />
           <p>
-            <>{errors.simNumber.message}</>
+            <>{""}</>
           </p>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
