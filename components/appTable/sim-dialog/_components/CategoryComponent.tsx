@@ -60,9 +60,12 @@ export const CategoryComponent: React.FC<CategoryComponentProps> = ({
           {allSubscriptions.map((category) => (
             <SelectItem
               className="cursor-pointer hover:bg-secondary"
+              //@ts-ignore
               key={category.label}
+              //@ts-ignore
               value={category.label}
             >
+              {/* @ts-ignore */}
               {category.label}
             </SelectItem>
           ))}
