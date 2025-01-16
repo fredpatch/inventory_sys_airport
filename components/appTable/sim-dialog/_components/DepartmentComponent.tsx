@@ -28,12 +28,12 @@ export const DepartmentComponent = () => {
       />
 
       {/* error message */}
-      {errors.department && (
+      {/* {errors.department && (
         <div className="text-red-500 flex gap-1 items-center text-[13px]">
           <MdError />
           <p>Le nom du département est requis</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

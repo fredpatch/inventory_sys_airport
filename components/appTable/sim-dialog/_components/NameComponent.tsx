@@ -10,10 +10,7 @@ export const NameComponent = ({
 }: {
   onSelectedIcon: (selectedIcon: React.ReactNode) => void;
 }) => {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext();
+  const { register } = useFormContext();
 
   function getSelectedIcon(selectedIcon: React.ReactNode) {
     onSelectedIcon(selectedIcon);
@@ -38,14 +35,14 @@ export const NameComponent = ({
       </div>
 
       {/* Error message */}
-      {errors.name && (
+      {/* {errors.name && (
         <div className="text-red-500 flex gap-1 items-center text-[13px]">
           <MdError />
           <p>
-            <>{errors.name.message}</>
+            <>{"The user's name is required"}</>
           </p>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
