@@ -125,7 +125,6 @@ const AddItemDialog = () => {
       setSelectedSubscriptions(
         selectedSim.subscriptions.map((sub: any) => sub.label) || []
       );
-      setSelectedIcon(selectedSim.icon);
     } else {
       reset({
         department: "",
@@ -138,7 +137,7 @@ const AddItemDialog = () => {
 
       setSelectedTab("Draft");
       setSelectedSubscriptions([]);
-      setSelectedIcon(icons.find((icon) => icon.isSelected === true)?.icon);
+      // setSelectedIcon(icons.find((icon) => icon.isSelected === true)?.icon);
     }
   }, [selectedSim, openSimDialog, reset]);
 
@@ -152,7 +151,6 @@ const AddItemDialog = () => {
         status: selectedTab,
         subscriptions: selectedSubscriptions,
         cost: calculateTotalPrice(selectedSubscriptions),
-        icon: selectedIcon,
       };
 
       const result = selectedSim
